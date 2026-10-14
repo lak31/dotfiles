@@ -84,7 +84,7 @@ end, { nargs = 1 })
 map("n", "<leader>fm", vim.lsp.buf.format, opts)
 
 -- Run files
-map("n", "<leader>rp", ":w<CR>:terminal python3 %<CR>", opts)
-map("n", "<leader>rc", ":w<CR>:terminal g++ -o /tmp/out % && /tmp/out<CR>", opts)
-map("n", "<leader>rj", ":w<CR>:terminal javac % && java %:r<CR>", opts)
-map("n", "<leader>rn", ":w<CR>:terminal node %<CR>", opts)
+map("n", "<leader>rp", ":w<CR>:split | terminal python3 %<CR>", opts)
+map("n", "<leader>rc", ":w<CR>:split | terminal g++ -o /tmp/out % && /tmp/out<CR>", opts)
+map("n", "<leader>rj", ":w<CR>:split | tterminal javac % && java %:r<CR>", opts)
+map("n", "<leader>rn", ":w<CR>:split | terminal node %<CR>", opts)
